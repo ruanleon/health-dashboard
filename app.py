@@ -435,7 +435,7 @@ if st.button("🚀 生成详细报告", type="primary"):
         
         with st.spinner("正在全维度解析..."):
             response = client.chat.completions.create(
-                model="gemini-2.0-flash", 
+                model="gemini-2.5-flash", 
                 messages=messages,
                 temperature=0.0, 
                 response_format={"type": "json_object"}
@@ -597,4 +597,5 @@ if st.button("🚀 生成详细报告", type="primary"):
             st.json(data)
             
     except Exception as e:
+
         st.error(f"处理过程中发生错误: {e}")
